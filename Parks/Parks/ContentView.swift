@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     @State private var parks: [Park] = []
-
+    
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(parks) { park in
-                    ParkRow(park: park)
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(parks) { park in
+                        NavigationLink(value: park) {
+                            ParkRow(park: park)
+                        }
+                    }
                 }
             }
+            .navigationDestination(for: Park.self) { park in 
+                ParkDetailView(park: park)
+            }
+            .navigationTitle("National Parks")
         }
+
         .padding()
         .onAppear(perform: {
             Task {
