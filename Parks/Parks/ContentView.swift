@@ -15,8 +15,7 @@ struct ContentView: View {
         ScrollView {
             LazyVStack {
                 ForEach(parks) { park in
-                    Text(park.name)
-                        .font(.title)
+                    ParkRow(park: park)
                 }
             }
         }
