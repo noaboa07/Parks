@@ -22,11 +22,21 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationDestination(for: Park.self) { park in 
+            .navigationDestination(for: Park.self) { park in
                 ParkDetailView(park: park)
             }
-            .navigationTitle("National Parks")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: VStack(alignment: .leading) {
+                Text("National Parks")
+                    .font(.title) // Main title font
+                    .bold()
+                Text("by Noah Russell, Z23667779")
+                    .font(.subheadline) // Smaller subtitle font
+                    .foregroundColor(.secondary) // Optional: Change color for the subtitle
+            })
         }
+
+
 
         .padding()
         .onAppear(perform: {
