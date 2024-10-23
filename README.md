@@ -34,7 +34,7 @@ GIF created with VEED.io
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+As an avid hiker/National Park enjoyer, I will definitely be using + adding to this app.
 
 ## License
 
