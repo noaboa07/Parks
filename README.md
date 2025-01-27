@@ -1,53 +1,69 @@
-# Lab 5 - *Parks*
+# Parks - Explore National Parks Across the United States
 
-Submitted by: **Noah Russell** **Z23667779**
+**Parks** is a mobile app designed to help users discover national parks across the United States. With a clean and intuitive interface, users can view a list of parks, tap to get detailed information about each park, view additional images, and see the park's location on a map. This app leverages the power of the National Parks API to provide up-to-date and comprehensive information, making it easy for users to plan their next adventure.
 
-**Parks** is an app that will allow users to explore national parks , conveniently filtered by state. By selecting a park, users can navigate to a detail screen offering more comprehensive information about the park, additional images, and a map showcasing the park's location. Although the SwiftUI implementation details may be new, your past experience in building REST clients with UIKit will give you an advantage, as the app's high-level structure and design remain similar. So lace up your hiking boots and get ready to hit the trail! 
+- Developer: Noah Russell
+- Development Time: Approximately 3 hours
+- Technologies Used: Swift, SwiftUI, Xcode, National Parks API
 
-Time spent: **3** hours spent in total
+## Features
 
-## Required Features
+The following required features have been successfully implemented:
 
-The following **required** functionality is completed:
+- [✅] View National Parks List: Users can view a list of parks fetched from the National Parks API, with each park displaying basic information such as its name, description, and location.
+- [✅] Park Detail Screen: Tapping on a park shows a detailed screen with additional information, images of the park, and an interactive map that showcases the park’s location.
 
-- [✅] View a list parks fetched from the national parks API
-- [✅] Tap a park to view a detail screen with more info, images and a map of the park's location
+## Optional Features
 
- 
-The following **optional** features are implemented:
+The following optional features were planned but not yet implemented:
 
-- [❌] Select a state from a menu to view all parks in the selected state
-- [❌] Sort parks alphabetically ascending/descending
-- [❌] Search for a park via a search bar
+- [❌] State Filter: Users can select a state from a menu to view only parks located in the selected state.
+- [❌] Park Sorting: Allow users to sort parks alphabetically, either ascending or descending.
+- [❌] Park Search: Provide a search bar to allow users to search for parks by name.
 
-The following **additional** features are implemented:
+## Future Enhancements
 
-- [ ] List anything else that you can get done to improve the app functionality!
+In future versions, I plan to implement the following features to enhance user experience:
+
+- [🔲] State Filter: Implement a drop-down menu or picker to filter parks based on the selected state.
+- [🔲] Park Sorting: Enable users to sort the parks list alphabetically, both in ascending and descending order.
+- [🔲] Park Search: Add a search bar to allow users to search for parks by name or keyword.
+- [🔲] User Favorites: Allow users to mark parks as favorites and easily access them from a "Favorites" list.
 
 ## Video Walkthrough
 
-My video Walkthrough:
+Here’s a demonstration of the current functionality in the app:
 
-<img style="max-width:300px;" src="Parks/Lab5.gif">
+<img style="max-width:300px;" src="Parks/Lab5.gif" alt="Parks App Demo">
+GIF created with VEED.io.
 
-GIF created with VEED.io
+## Development Process
 
-## Notes
+This project was a great exercise in working with SwiftUI and integrating data from a REST API (the National Parks API). Here are some highlights:
 
-As an avid hiker/National Park enjoyer, I will definitely be using + adding to this app.
+- Data Fetching: The app retrieves data from the National Parks API and displays it in a list. This was accomplished using URLSession for fetching data and Decodable to parse the JSON response into usable models.
+- SwiftUI Views: The app’s UI was built using SwiftUI, allowing for a responsive and clean interface. List and NavigationLink were used to display the list of parks and allow navigation to detailed park views.
+- Map Integration: The detail screen includes an interactive map that uses MapKit to display the park’s location, providing users with visual context for where each park is located.
+
+## Challenges Faced
+- API Integration: The biggest challenge was understanding the structure of the National Parks API and ensuring that data was fetched and displayed correctly.
+- UI Layout: Ensuring that the detail screen, images, and map were displayed correctly on all screen sizes and devices required some trial and error with layout constraints in SwiftUI.
+
+## Key Takeaways
+- Gained experience working with REST APIs in SwiftUI.
+- Learned how to fetch and display data asynchronously using URLSession and Combine.
+- Improved skills in MapKit for displaying maps in mobile applications.
+
+## Technologies Used
+
+- Programming Language: Swift
+- Frameworks: SwiftUI, MapKit, UIKit (for some views), URLSession
+- API: National Parks API
+- Development Environment: Xcode 14.0+
+- Version Control: Git, GitHub
 
 ## License
 
-    Copyright [2024] [Noah Russell]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Parks is licensed under the Apache License 2.0.
+You may obtain a copy of the license at:
+http://www.apache.org/licenses/LICENSE-2.0
